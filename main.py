@@ -1,11 +1,23 @@
-#1. Create a greeting for your program.
-print("Welcome to the Band Name Generator.")
-#2. Ask the user for the city that they grew up in.
-city_name = input("What's name of  the city you grew up in? ")
-#3. Ask the user for the name of a pet.
-pet_name = input("What's your pet name? ")
-#4. Combine the name of their city and pet and show them their band name.
-print("Your band name could be " + city_name + " " + pet_name)
-#5. Make sure the input cursor shows on a new line:
+print("Welcome to the tip calculator!")
+bill = input("What was the total bill? $")
+#print(type(bill_float))
+bill = float(bill)
 
-# Solution: https://replit.com/@appbrewery/band-name-generator-end
+tips = int(input("How much tip would you like to give? 10,12, or 15? "))
+#print(type(tips))
+tips = int(tips)
+
+people = input("How many people to split the bill? ")
+#print(type(people))
+people = int(people)
+
+bill_with_tips = tips / 100 * bill + bill
+bill_with_tips = float(bill_with_tips)
+
+bill_per_person = bill_with_tips / people
+bill_per_person = round(bill_per_person, 2)
+
+print(f"Each person should pay: {bill_per_person}")
+
+
+
